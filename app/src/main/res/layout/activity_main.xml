@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/ed_numero1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:inputType="numberDecimal"
+        android:hint="Número"
+        android:maxLines="2"
+        />
+    <EditText
+        android:id="@+id/ed_numero2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        app:layout_constraintEnd_toEndOf="@id/ed_numero1"
+        app:layout_constraintTop_toBottomOf="@id/ed_numero1"
+        android:inputType="numberDecimal"
+        android:hint="Número"
+        android:maxLines="2"
+        />
+    <TextView
+        android:id="@+id/tv_resultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:hint="Resultado"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@id/ed_numero2"
+        app:layout_constraintTop_toBottomOf="@id/ed_numero2"
+        />
+    <TextView
+        android:id="@+id/tv_operador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha o operador matemático:"
+        android:layout_margin="6dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_resultado"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultado"
+        />
+    <Spinner
+        android:id="@+id/sp_operador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/array_operadores"
+        android:layout_margin="6dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_operador"
+        app:layout_constraintTop_toBottomOf="@+id/tv_operador"
+        />
+    <Button
+        android:id="@+id/btn_calcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:layout_margin="6dp"
+        app:layout_constraintStart_toStartOf="@+id/sp_operador"
+        app:layout_constraintTop_toBottomOf="@+id/sp_operador"
+        app:layout_constraintEnd_toEndOf="@+id/sp_operador"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
